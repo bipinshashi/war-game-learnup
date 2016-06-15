@@ -1,4 +1,4 @@
-class Player
+class WarPlayer
 	attr_reader :hand, :collection_pile, :current_card, :war_cards
 
 	def initialize(hand)

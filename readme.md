@@ -1,8 +1,14 @@
 ## WAR GAME (learnup)
 
-The program is split into 3 classes - 
+The program is split into 3 classes:
 
-## successful game_id's
+###WarAPI
+
+for handling endpoint communications with the LearnUp server
+
+###
+
+### successful game_id's
 
 5761d4f8d0daf01100bfa700
 

@@ -1,5 +1,5 @@
-require_relative './api.rb'
-require_relative './player.rb'
+require_relative './war_api.rb'
+require_relative './war_player.rb'
 
 class WarGame
 
@@ -11,8 +11,8 @@ class WarGame
 	def start(name, email)
 		response = @api.new_game(name, email)
 		@game_id = response['data']['id']
-		@player1 = Player.new(response['data']['one'])
-		@player2 = Player.new(response['data']['two'])
+		@player1 = WarPlayer.new(response['data']['one'])
+		@player2 = WarPlayer.new(response['data']['two'])
 		puts '-------------'
 		puts 'INITIAL HAND'
 		puts '-------------'
@@ -147,4 +147,5 @@ class WarGame
 	end
 end
 
-WarGame.new.start('bipen','bipen.sasi@gmail.com')
+raise Exception.new('argument missing, enter name and email') if ARGV.count != 2 
+WarGame.new.start(ARGV[0],ARGV[1])
