@@ -1,12 +1,23 @@
 ## WAR GAME (learnup)
 
-The program is split into 3 classes:
+
+The program is split into 3 classes: 
 
 ###WarAPI
 
 for handling endpoint communications with the LearnUp server
 
-###
+###WarPlayer
+
+player instance, handles the logic for playing cards at the player level
+
+###WarGame
+
+game instance, handles logic for running the gameplay
+
+##How to run:
+
+ruby war_game.rb [name] [email]
 
 ### successful game_id's
 
